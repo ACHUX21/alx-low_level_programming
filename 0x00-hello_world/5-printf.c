@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
-*main - Printf First Function
+* main - Printf First Function
+*
+* Return: Always 0
 */
 
 int main(void)
