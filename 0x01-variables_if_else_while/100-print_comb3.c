@@ -9,26 +9,26 @@
 
 int main(void)
 {
-		int i, j;
-		int k = 0;
+	int i, j;
+	int k = 0;
 
-				for (i = 48 ; i <= 48 + 8 ; i++)
+		for (i = 48 ; i <= 48 + 8 ; i++)
+		{
+			for (j = 49 + k ; j <= 48 + 9 ; j++)
+			{
+
+				putchar(i);
+				putchar(j);
+				if (i != 56 || j != 57)
 				{
-						for (j = 49 + k ; j <= 48 + 9 ; j++)
-						{
-
-							putchar(i);
-							putchar(j);
-								if (i != 56 || j != 57)
-								{
-									putchar(44);
-									putchar(32);
-								}
-
-						}
-					k++;
-
+					putchar(44);
+					putchar(32);
 				}
-				putchar('\n');
-		return (0);
+
+			}
+		k++;
+
+		}
+		putchar('\n');
+return (0);
 }
