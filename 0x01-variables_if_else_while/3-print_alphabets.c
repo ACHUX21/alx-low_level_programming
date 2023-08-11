@@ -18,7 +18,7 @@ int main(void)
 
 		for (j = 65; j < 91 ; j++)
 		{
-			pytchar(j);
+			putchar(j);
 		}
 
 	putchar('\n');
