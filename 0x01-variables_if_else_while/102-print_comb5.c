@@ -6,25 +6,31 @@
 * Return: Always 0 (Success)
 */
 
-int main(void)
+
+int main()
 {
 	int i, j;
-	int k = 0;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (i = 0 ; i < 100 ; i++ )
 	{
-		for (j = 0; j < 10 ; j++)
+		for (j = i + 1 ; j < 100 ; j++)
 		{
-			if (i != '9' && j != '9')
+			putchar(i / 10 + 48);
+			putchar(i % 10 + 48);
+
+			putchar(' ');
+
+			putchar(j / 10 + 48);
+			putchar(j % 10 + 48);
+
+			if (j != 99 || i != 98)
 			{
-				if (k % 2 != 0)
-					putchar(',');
+				putchar(',');
 				putchar(' ');
 			}
-			putchar(i + 48);
-			putchar(j + 48);
-		k++;
 		}
 	}
-return (0);
+	putchar('\n');
+	return (0);
 }
+
