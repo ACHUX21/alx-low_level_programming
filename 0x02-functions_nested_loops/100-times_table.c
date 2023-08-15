@@ -16,12 +16,12 @@ for (y = 0 ; y <= n ; y++)
 {
 if (y != n + 1 && y != 0)
 {
-putchar(',');
+_putchar(',');
 if (p < 10)
-putchar(' ');
+_putchar(' ');
 if (p < 100)
-putchar(' ');
-putchar(' ');
+_putchar(' ');
+_putchar(' ');
 }
 p = x * y;
 if (p >= 10 && p < 100)
