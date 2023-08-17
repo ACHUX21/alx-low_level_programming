@@ -13,13 +13,13 @@ for (i = size ; i >= 0 ; i--)
 {
 for (j = i ; j > -1 ; j--)
 {
-putchar(' ');
+_putchar(' ');
 }
 for (k = i ; k <= size ; k++)
 {
-putchar('#');
+_putchar('#');
 }
 
-putchar('\n');
+_putchar('\n');
 }
 }
