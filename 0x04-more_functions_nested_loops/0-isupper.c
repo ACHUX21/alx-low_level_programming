@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* isupper - A function That check if the input is upper
+* _isupper - A function That check if the input is upper
 * @c: Integer
 * Return: return 1 if int c is upper else 0
 */
