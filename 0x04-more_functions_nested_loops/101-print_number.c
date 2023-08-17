@@ -5,7 +5,7 @@
  * @n: The integer to be printed
  */
 
-void print_number(int n)
+void print_numbers(int n)
 {
 	unsigned int num;
 
@@ -18,6 +18,6 @@ void print_number(int n)
 	else
 		num = n;
 	if (num / 10)
-		print_number(num / 10);
+		print_numbers(num / 10);
 	_putchar((num % 10) + '0');
 }
