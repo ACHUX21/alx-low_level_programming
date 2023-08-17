@@ -13,5 +13,6 @@ for (j = 0 ; j < 10 ; j++)
 			_putchar(i / 10 + 48);
 		_putchar(i % 10 + 48);
 	}
+_putchar('\n');
 }
 }
