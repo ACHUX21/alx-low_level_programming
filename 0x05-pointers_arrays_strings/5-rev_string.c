@@ -21,7 +21,7 @@ void rev_string(char *s)
 	}
 	rev[length] = '\0';
 
-	for (int i = 0; i < length + 1; i++)
+	for (i = 0; i < length + 1; i++)
 	{
 		s[i] = rev[i];
 	}
