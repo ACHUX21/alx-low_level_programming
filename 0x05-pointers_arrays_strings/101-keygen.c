@@ -35,10 +35,11 @@ int main(void)
                     {
                         putchar(random);
                     }
-                    return 1;
+                    return (0);
                 }
             }
         }
 
     }
+    return (1);
 }
