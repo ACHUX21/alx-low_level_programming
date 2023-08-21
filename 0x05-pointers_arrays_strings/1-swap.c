@@ -4,7 +4,7 @@
  *
  * @a: Integer
  * @b: Integer
- * @temp: Temporary variable
+ *
  * Return: Void
  */
 
