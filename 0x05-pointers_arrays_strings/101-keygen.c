@@ -10,7 +10,7 @@ int main(void)
 
     srand(time(NULL));
     sum = 0;
-    while ( sum <= 2772 )
+    while (sum <= 2772)
     {
         random = rand() % 128;
         sum += random;
