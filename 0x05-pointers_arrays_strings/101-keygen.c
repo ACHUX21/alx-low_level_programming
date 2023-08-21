@@ -35,7 +35,7 @@ int main(void)
                     {
                         putchar(random);
                     }
-                    return 0;
+                    return 1;
                 }
             }
         }
