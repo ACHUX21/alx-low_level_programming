@@ -8,38 +8,21 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
-/**
- * @brief 
- * 
- */
 
 
 int main(void)
 {
-    while(1)
+
+    int random, sum;
+
+    srand(time(NULL));
+    sum = 0;
+    while ( sum <= 2772 )
     {
-        int random, i, j;
-        srand(time(NULL));
-        random = rand() % 100;
-
-        if (random >= 33 && random <= 126)
-        {
-
-            for (i = 0; i < 100; i++)
-            {
-
-                if (random * i == 2772)
-                {
-
-                    for (j = 0; j < i; j++)
-                    {
-                        putchar(random);
-                    }
-                    return (0);
-                }
-            }
-        }
-
+        random = rand() % 128;
+        sum += random;
+        putchar(random);
     }
-    return (0);
+    putchar(2772 - sum);
+    return 0;
 }
