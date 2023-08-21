@@ -29,7 +29,7 @@ if (s[i] == '-')
 negative++;
 if (s[i] >= '0' && s[i] <= '9')
 {
-h = h * 10 + (int)s[i] - 48;
+h = h * 10 + s[i] - 48;
 check = 1;
 }
 i++;
