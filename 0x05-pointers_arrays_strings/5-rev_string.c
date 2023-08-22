@@ -13,13 +13,14 @@ int lenght = 0;
 int i;
 
 while (s[lenght] != '\0')
-lenght++;
-
+{
+	lenght++;
+}
 for (i = 0; i < lenght; i++)
 {
-lenght--;
-reverse = s[i];
-s[i] = s[lenght];
-s[lenght] = reverse;
+	lenght--;
+	reverse = s[i];
+	s[i] = s[lenght];
+	s[lenght] = reverse;
 }
 }
