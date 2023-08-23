@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strncat - Concatenate Two Arrays
  * @dest: The destination string
