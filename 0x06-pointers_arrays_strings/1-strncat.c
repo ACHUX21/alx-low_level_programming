@@ -1,33 +1,30 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * _strncat - Concatenate Two Arrays
- * @dest: The destination string
- * @src: The source string
- * @n: The number of bytes to copy
- * Return: The destination string
+ * _strncat - concatenate two strings
+ * using at most n bytes from src
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, j = 0, z, k;
-	char src1[n];
+	int i;
+	int j;
 
-	for (k = 0; k < n; k++)
-	{
-		src1[k] = src[k];
-	}
-
+	i = 0;
 	while (dest[i] != '\0')
-		i++;
-
-	while (src1[j] != '\0')
-		j++;
-
-	for (z = 0; z < j; z++)
 	{
-		dest[i + z] = src1[z];
+		i++;
 	}
-	dest[i + j] = '\0';
-
+	j = 0;
+	while (j < n && src[j] != '\0')
+	{
+	dest[i] = src[j];
+	i++;
+	j++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
