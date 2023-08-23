@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * leet - Function
  * @str: string
