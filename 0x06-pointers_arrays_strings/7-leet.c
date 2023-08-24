@@ -15,7 +15,7 @@ char *leet(char *str)
 	while (str[len] != '\0')
 		len++;
 
-	for (i = 0; i < len - 1; i++)
+	for (i = 0; i < len ; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
