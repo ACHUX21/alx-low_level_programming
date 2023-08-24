@@ -12,10 +12,7 @@ char *leet(char *str)
 	int i;
 	int j;
 
-	while (str[len] != '\0')
-		len++;
-
-	for (i = 0; i < len ; i++)
+	for (i = 0; s[i] = '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
