@@ -15,7 +15,7 @@ char *leet(char *str)
 	while (str[len] != '\0')
 		len++;
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len - 1; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
@@ -26,15 +26,4 @@ char *leet(char *str)
 		}
 	}
 	return (str);
-}
-
-int main(void)
-{
-    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
-    char *p;
-
-    p = leet(s);
-    printf("%s", p);
-    printf("%s", s);
-    return (0);
 }
