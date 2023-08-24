@@ -6,8 +6,8 @@
  */
 char *leet(char *str)
 {
-	char alphabet[10] = "aAeEoOtTlL";
-	char numbers[10] = "4433007711";
+	char *alphabet = "aAeEoOtTlL";
+	char *numbers = "4433007711";
 	int i;
 	int j;
 
