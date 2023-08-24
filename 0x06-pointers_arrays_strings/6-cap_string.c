@@ -6,24 +6,28 @@
  * Return: Capitalized string
  *
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int j, i;
-	char spr[13] = {' ', '\t', '\n', ',', ';', '.',
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
 	'!', '?', '"', '(', ')', '{', '}'};
+	int i, j;
 
-	if (str[i] <= 'a' && str[i] <= 'z')
-		str[i] -= 32;
-
-	while (str[i])
+	i = 0;
+	if (s[i] >= 'a' && s[i] <= 'z')
+	{
+		s[i] -=  32;
+	}
+	while (s[i])
 	{
 		for (j = 0; j < 13; j++)
-			if (str[i] == spr[j])
+		{
+			if (s[i] == spe[j])
 			{
-				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-					str[i + 1] -= 32;
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+					s[i + 1] -= 32;
 			}
-	i++;
+		}
+		i++;
 	}
-	return (str);
+	return (s);
 }
