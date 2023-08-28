@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strchr - Function to convert a string to a character
  * @s: String to convert
@@ -14,5 +13,5 @@ char *_strchr(char *s, char c)
 			return (s);
 		s++;
 	}
-	return (NULL);
+	return (s);
 }
