@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
  * _strspn - strspn function for string comparison
  * @s: string
