@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strchr - Function to convert a string to a character
  * @s: String to convert
