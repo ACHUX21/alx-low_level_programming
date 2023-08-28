@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strpbrk - strpbrk function for string comparison function
  * @s: the string
