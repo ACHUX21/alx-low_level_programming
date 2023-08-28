@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strpbrk - strpbrk function for string comparison function
  * @s: the string
@@ -18,5 +19,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
-	return (s);
+	return (NULL);
 }
