@@ -4,7 +4,7 @@
  * @n: number to find
  * Return: 1 if prime, 0 if not found
  */
-#include "main.h"
+n.h"
 
 /**
  * is_prime_number - Checks if a number is a prime number recursively.
