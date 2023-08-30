@@ -1,14 +1,5 @@
 #include "main.h"
 /**
- * _sqrt_recursion - recursion function for sqrt
- * @n: number to be squared
- * Return: number of occurrences
- */
-int _sqrt_recursion(int n)
-{
-	return (hsqrt(n, 1));
-}
-/**
  * hsqrt - function for sqrt
  * @n: number to be squared
  * @i: number of occurrences
@@ -26,3 +17,13 @@ int hsqrt(int n, int i)
 	i++;
 	return (hsqrt(n, i));
 }
+/**
+ * _sqrt_recursion - recursion function for sqrt
+ * @n: number to be squared
+ * Return: number of occurrences
+ */
+int _sqrt_recursion(int n)
+{
+	return (hsqrt(n, 1));
+}
+
