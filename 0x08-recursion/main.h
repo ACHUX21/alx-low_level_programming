@@ -1,13 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <unistd.h>
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
@@ -21,6 +15,5 @@ int checker(int n, int x);
 int is_palindrome(char *s);
 int is_second_palindrome(char *s, int x);
 int len(char *s, int x);
-int wildcmp(char *s1, char *s2);*s);
 
 #endif
