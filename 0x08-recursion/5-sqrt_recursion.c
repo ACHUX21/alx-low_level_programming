@@ -6,15 +6,15 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (h_sqrt(n, 1));
+	return (hsqrt(n, 1));
 }
 /**
- * h_sqrt - function for sqrt
+ * hsqrt - function for sqrt
  * @n: number to be squared
  * @i: number of occurrences
  * Return: number of occurrences
  */
-int h_sqrt(int n, int i)
+int hsqrt(int n, int i)
 {
 	if (n < 0)
 		return (-1);
@@ -24,5 +24,5 @@ int h_sqrt(int n, int i)
 		return (-1);
 
 	i++;
-	return (h_sqrt(n, i));
+	return (hsqrt(n, i));
 }
