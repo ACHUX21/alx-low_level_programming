@@ -6,15 +6,15 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (_sqrt(n, 1));
 }
 /**
- * sqrt - function for sqrt
+ * _sqrt - function for sqrt
  * @n: number to be squared
  * @i: number of occurrences
  * Return: number of occurrences
  */
-int sqrt(int n, int i)
+int _sqrt(int n, int i)
 {
 	if (n < 0)
 		return (-1);
@@ -24,29 +24,5 @@ int sqrt(int n, int i)
 		return (-1);
 
 	i++;
-	return (sqrt(n, i));
+	return (_sqrt(n, i));
 }
-/**
- * main - function
- * Return: 0
- */
-int main(void)
-{
-	int r;
-
-	r = _sqrt_recursion(1);
-	printf("%d\n", r);
-	r = _sqrt_recursion(1024);
-	printf("%d\n", r);
-	r = _sqrt_recursion(16);
-	printf("%d\n", r);
-	r = _sqrt_recursion(17);
-	printf("%d\n", r);
-	r = _sqrt_recursion(25);
-	printf("%d\n", r);
-	r = _sqrt_recursion(-1);
-	printf("%d\n", r);
-	return (0);
-}
-
-
