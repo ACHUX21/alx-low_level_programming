@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
 * main - program that prints its name, followed by a new line.
 * @argv: argument list
