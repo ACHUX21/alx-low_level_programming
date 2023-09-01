@@ -5,15 +5,10 @@
  * @argv: argument list
  * Return: int
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int len = 0;
+	argc--;
 
-	int i;
-
-	for (i = 0; i < argc; i++)
-		len++;
-
-	printf("%d\n", len - 1);
+	printf("%d\n", argc);
 	return (0);
 }
