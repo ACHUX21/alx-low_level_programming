@@ -1,11 +1,10 @@
 #include <stdio.h>
 /**
  * main - main function for the application and application
- * @argc - argument
- * @argv - argument list
- * return: int
+ * @argc: argument
+ * @argv: argument list
+ * Return: int
  */
-
 int main(int argc, char *argv)
 {
 	int len = 0;
