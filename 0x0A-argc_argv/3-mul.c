@@ -19,13 +19,13 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (i = 1; i < argc; i++)
-		{
-			int h = atoi(argv[i]);
+		int num1, num2, i;
 
-			sum *= h;
-		}
-		printf("%d\n", sum);
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+		i = num1 * num2;
+		printf("%d\n", i);
+	return (0);
 	}
 	return (0);
 }
