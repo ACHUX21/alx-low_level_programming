@@ -8,9 +8,6 @@
 */
 int main(int argc, char *argv[])
 {
-	int sum = 1;
-
-	int i;
 
 	if (argc != 3)
 	{
@@ -25,7 +22,7 @@ int main(int argc, char *argv[])
 		num2 = atoi(argv[2]);
 		i = num1 * num2;
 		printf("%d\n", i);
-	return (0);
+		return (0);
 	}
-	return (0);
+
 }
