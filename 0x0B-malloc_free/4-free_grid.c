@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * free_grid - Frees a 2-dimensional grid
  * @grid: The grid to be freed
