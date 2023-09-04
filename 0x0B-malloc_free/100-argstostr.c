@@ -10,7 +10,8 @@ char *argstostr(int argc, char **argv)
 	char *result;
 
 	int i, j, h, charr;
-    int index = 0;
+
+	int index = 0;
 
 	if (argc == 0)
 		return (NULL);
