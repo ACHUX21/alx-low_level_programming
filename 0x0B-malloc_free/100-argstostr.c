@@ -7,41 +7,38 @@
 */
 char *argstostr(int argc, char **argv)
 {
+	char *result;
 
-	int c, h, i, g;
-	char *str;
-	int index = 0;
+	int i, j, h, charr;
+    int index = 0;
 
 	if (argc == 0)
 		return (NULL);
+
 	for (h = 0; h < argc; h++)
 	{
-		for (g = 0; argv[h][g] != '\0'; g++)
+		for (j = 0; argv[h][j] != '\0'; j++)
 		{
-			c++;
+			charr++;
 		}
-		c++;
+		charr++;
 	}
 
-	str = malloc(sizeof(char) * (c + 1));
+	result = malloc(sizeof(char) * (charr + 1));
 
-	if (str == NULL)
-	{
+	if (result == NULL)
 		return (NULL);
-	}
 
 	for (i = 0; i < argc; i++)
 	{
-		for (g = 0; argv[i][g] != '\0'; g++)
+		for (j = 0; argv[i][j] != '\0' ; j++)
 		{
-			str[index] = argv[i][g];
+			result[index] = argv[i][j];
 			index++;
 		}
-		str[index] = '\n';
+		result[index] = '\n';
 		index++;
 	}
-
-	str[index] = '\0';
-	return (str);
+	result[index] = '\0';
+	return (result);
 }
-    
