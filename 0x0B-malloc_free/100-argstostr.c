@@ -22,7 +22,7 @@ char *argstostr(int argc, char **argv)
 		}
 		charr++;
 	}
-	result = (char *)malloc(sizeof(char) * (charr + 1));
+	result = malloc(sizeof(char) * (charr + 1));
 
 	if (result == NULL)
 		return (NULL);
@@ -34,7 +34,7 @@ char *argstostr(int argc, char **argv)
 			result[index] = argv[i][j];
 			index++;
 		}
-		result[i] = '\n';
+		result[index] = '\n';
 		index++;
 	}
 	result[index] = '\0';
