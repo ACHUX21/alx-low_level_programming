@@ -9,14 +9,14 @@ char *argstostr(int argc, char **argv)
 {
 	char *result;
 
-	int i, j, g, h, charr, index;
+	int i, j, h, charr, index;
 
 	if (argc == 0)
 		return (NULL);
 
 	for (h = 0; h < argc; h++)
 	{
-		for (g = 0; argv[h][g] != '\0'; g++)
+		for (j = 0; argv[h][j] != '\0'; j++)
 		{
 			charr++;
 		}
