@@ -9,7 +9,7 @@ char *argstostr(int argc, char **argv)
 {
 	char *result;
 
-	int charr, i, j, h;
+	int i, charr, j, h;
 
 
 	int index = 0;
