@@ -7,10 +7,13 @@
 */
 char *argstostr(int argc, char **argv)
 {
-char *result;
-int i, j;
-int charr;
-int index = 0;
+	char *result;
+
+	int i, j;
+
+	int charr = 0;
+
+	int index = 0;
 
 	if (argc == 0)
 		return (NULL);
