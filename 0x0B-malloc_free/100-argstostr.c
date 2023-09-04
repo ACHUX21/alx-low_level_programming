@@ -9,18 +9,18 @@ char *argstostr(int argc, char **argv)
 {
 	char *result;
 
-	int i, j;
+	int i, j, h;
 
-	int charr = 0;
+	int charr;
 
 	int index = 0;
 
 	if (argc == 0)
 		return (NULL);
 
-	for (i = 0; i < argc; i++)
+	for (h = 0; h < argc; h++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (j = 0; argv[h][j] != '\0'; j++)
 		{
 			charr++;
 		}
