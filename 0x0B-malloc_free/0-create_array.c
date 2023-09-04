@@ -1,4 +1,6 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * create_array - create an array
  * @size: size of the array
@@ -15,7 +17,7 @@ char *create_array(unsigned int size, char c)
 	if (size == 0 || p == NULL)
 		return (NULL);
 
-	for (i = 1; i <= size; i++)
+	for (i = 0; i < size; i++)
 		p[i] = c;
 
 	return (p);
