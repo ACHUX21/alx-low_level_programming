@@ -9,9 +9,8 @@ char *argstostr(int argc, char **argv)
 {
 	char *result;
 
-	int i, j, h;
+	int charr, i, j, h;
 
-	int charr = 0;
 
 	int index = 0;
 
