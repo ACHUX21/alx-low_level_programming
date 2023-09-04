@@ -11,7 +11,7 @@ char *argstostr(int argc, char **argv)
 
 	int i, j, h;
 
-	int charr;
+	int charr = 0;
 
 	int index = 0;
 
