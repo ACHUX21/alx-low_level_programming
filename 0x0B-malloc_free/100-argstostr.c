@@ -8,16 +8,16 @@
 char *argstostr(int argc, char **argv)
 {
 char *result;
-int i, j, h;
+int i, j;
 int charr;
 int index = 0;
 
 	if (argc == 0)
 		return (NULL);
 
-	for (h = 0; h < argc; h++)
+	for (i = 0; i < argc; i++)
 	{
-		for (j = 0; argv[h][j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			charr++;
 		}
