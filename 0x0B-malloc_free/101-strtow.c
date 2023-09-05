@@ -1,5 +1,21 @@
 #include "main.h"
 /**
+* _count_words - function that calculates the length of a string
+* @str: the string to calculate length of
+* Return: the length
+*/
+int _count_words(char *str)
+{
+	int len = 0, k = 0;
+
+	for (k = 1; str[k] != '\0'; k++)
+	{
+	if (str[k - 1] != ' ' && str[k] == ' ')
+		len++;
+	}
+	return (len);
+}
+/**
 * strtow - function that splits a string into words.
 * @str: the string to split
 * Return: returns a pointer to an array of strings (words)
@@ -48,20 +64,4 @@ char **strtow(char *str)
 	matrix[k] = NULL;
 
 	return (matrix);
-}
-/**
-* _count_words - function that calculates the length of a string
-* @str: the string to calculate length of
-* Return: the length
-*/
-int _count_words(char *str)
-{
-	int len = 0, k = 0;
-
-	for (k = 1; str[k] != '\0'; k++)
-	{
-	if (str[k - 1] != ' ' && str[k] == ' ')
-		len++;
-	}
-	return (len);
 }
