@@ -1,25 +1,42 @@
+#include <stdlib.h>
 #include "main.h"
-/**
-* _count_words - function that calculates the length of a string
-* @str: the string to calculate length of
-* Return: the length
-*/
-int _count_words(char *str)
-{
-	int len = 0, k = 0;
 
-	for (k = 1; str[k] != '\0'; k++)
-	{
-	if (str[k - 1] != ' ' && str[k] == ' ')
-		len++;
-	}
-	return (len);
-}
 /**
-* strtow - function that splits a string into words.
-* @str: the string to split
-* Return: returns a pointer to an array of strings (words)
-*/
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
+ *
+ * Return: n° of words
+ */
+
+int count_word(char *s)
+{
+	int flag, c, w;
+
+	flag = 0;
+	w = 0;
+
+	for (c = 0; s[c] != '\0'; c++)
+	{
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
+		{
+			flag = 1;
+			w++;
+		}
+	}
+
+	return (w);
+}
+
+/**
+ * **strtow - splits a string into words
+ * @str: string to split
+ *
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
+ */
+
 char **strtow(char *str)
 {
 	char **matrix, *tmp;
@@ -27,12 +44,11 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-	words = _count_words(str);
+	words = count_word(str);
 	if (words == 0)
 		return (NULL);
 
 	matrix = (char **) malloc(sizeof(char *) * (words + 1));
-
 	if (matrix == NULL)
 		return (NULL);
 
@@ -44,13 +60,10 @@ char **strtow(char *str)
 			{
 				end = i;
 				tmp = (char *) malloc(sizeof(char) * (c + 1));
-
 				if (tmp == NULL)
 					return (NULL);
-
 				while (start < end)
 					*tmp++ = str[start++];
-
 				*tmp = '\0';
 				matrix[k] = tmp - c;
 				k++;
