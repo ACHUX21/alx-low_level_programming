@@ -26,9 +26,11 @@ int _strlen(char *s)
  */
 void _strcpy(char *ptr, char *p)
 {
-	for (; *p != '\0'; ptr++, p++)
+	while (*p != '\0')
 	{
 		*ptr = *p;
+		ptr++;
+		p++;
 	}
 	*ptr = '\0';
 }
