@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	b = atoi(argv[2 - 1]) - 1;
+	b = atoi(argv[1]);
 
 	if (b <= -1)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	while (--b)
+	while (b--)
 	{
 		printf("%02hhx%s", *p++, b ? " " : "\n");
 	}
