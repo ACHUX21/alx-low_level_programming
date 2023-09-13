@@ -3,6 +3,7 @@
  * int_index - index of the function
  * @array: array of function
  * @cmp: function pointer comparison
+ * @size: size of the array
  * Return: Integer
 */
 int int_index(int *array, int size, int (*cmp)(int))
