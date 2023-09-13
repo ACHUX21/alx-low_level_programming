@@ -1,50 +1,64 @@
 #include "3-calc.h"
-#include "stdlib.h"
-/**
- * _strcmp - compare two strings
- * @s1: string 1
- * @s2: string 2
- * Return: Integer
- */
-int _strcmp(char *s1, char *s2)
-{
-	int i = 0;
-
-	while (1)
-	{
-		if (s1[i] > s2[i] || s2[i] > s1[i])
-			return (s1[i] - s2[i]);
-		if (s1[i] == '\0' && s2[i] == '\0')
-		{
-			return (0);
-		}
-		i++;
-	}
-}
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * get_op_func -  the function that selects the correct
- * function to perform the operation asked by the user.
- * You’re not allowed to declare any other function.
- * @s: the name of the function
- * Return: integer
+* op_add - add a & b
+* @a: number1
+* @b: number2
+* Return: sum
 */
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-		op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
-	int i;
-
-	for (i = 0; i < 5 ; i++)
+	return (a + b);
+}
+/**
+ * op_sub - subtract a
+ * @a: number1
+ * @b: number2
+ * Return: sum
+*/
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+/**
+ * op_mul - multiply a
+ * @a: number1
+ * @b: number2
+ * Return: sum
+*/
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+/**
+ * op_div - divide a
+ * @a: number1
+ * @b: number2
+ * Return: sum
+*/
+int op_div(int a, int b)
+{
+	if (b == 0)
 	{
-		if (_strcmp(s, ops[i].op) == 0)
-			return (ops[i].f);
+		printf("Error\n");
+		exit(100);
 	}
-	return (0);
+	return (a / b);
+}
+/**
+ * op_mod - mod
+ * @a: number1
+ * @b: number2
+ * Return: sum
+*/
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
