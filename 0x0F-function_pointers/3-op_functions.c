@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include "stdlib.h"
 /**
  * _strcmp - compare two strings
  * @s1: string 1
