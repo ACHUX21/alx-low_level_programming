@@ -43,7 +43,7 @@ int (*get_op_func(char *s))(int, int)
 	for (i = 0; i < 5 ; i++)
 	{
 		if (_strcmp(s, ops[i].op) == 0)
-			return ops[i].f;
+			return (ops[i].f);
 	}
 	return (0);
 }
