@@ -1,4 +1,7 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
 * op_add - add a & b
 * @a: number1
