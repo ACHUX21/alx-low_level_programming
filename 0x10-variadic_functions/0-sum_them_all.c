@@ -2,7 +2,6 @@
 /**
  * sum_them_all - sum them all the variables
  * @n: number of variables
- * @...: int
  * Return: INT
 */
 int sum_them_all(const unsigned int n, ...)
