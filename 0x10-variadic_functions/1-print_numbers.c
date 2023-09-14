@@ -10,6 +10,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (separator == NULL)
 		return;
+
 	va_list args;
 
 	va_start(args, n);
@@ -18,10 +19,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if (i !=  0)
 			printf("%s", separator);
-		printf("%u", va_arg(args, unsigned int));
+		printf("%d", va_arg(args, int));
 
 	}
 	va_end(args);
 
 	printf("\n");
+}
+
+int main(void)
+{
+    print_numbers(", ", 4, 0, 98, -1024, 402);
+    return (0);
 }
