@@ -8,24 +8,21 @@
  * @str: the name of the node to be added
  * Return: adress of the node
 */
-list_t *add_node_end(list_t **head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
-	list_t *haruma = malloc(sizeof(list_t));
+	list_t *haruma;
+	unsigned int len = 0;
 
+	while (str[len])
+		len++;
+
+	haruma = malloc(sizeof(list_t));
 	if (!haruma)
 		return (NULL);
-
 	haruma->str = strdup(str);
+	haruma->len = len;
+	haruma->next = (*head);
+	(*head) = haruma;
 
-	if (haruma->str == NULL)
-	{
-		free(haruma);
-		return (NULL);
-	}
-	haruma->len = strlen(str);
-	haruma->next = *head;
-	*head = haruma;
-
-
-	return (haruma);
+	return (*head);
 }
