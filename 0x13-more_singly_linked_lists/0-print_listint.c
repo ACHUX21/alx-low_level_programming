@@ -13,3 +13,4 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("%d\n", harruma->n);
 		harruma = harruma->next;
+		i++;
