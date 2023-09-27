@@ -33,3 +33,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 		achux->next = harrumma;
 	}
+
+	return (harrumma);
+}
