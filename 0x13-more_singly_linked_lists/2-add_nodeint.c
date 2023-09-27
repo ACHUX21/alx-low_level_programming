@@ -13,3 +13,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (NULL);
 
 	harruma->n = n,	harruma->next = *head, *head = harruma;
+	return (harruma);
+}
