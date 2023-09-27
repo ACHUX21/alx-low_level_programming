@@ -8,3 +8,8 @@ size_t print_listint(const listint_t *h)
 {
 	const listint_t *harruma = h;
 	int i = 0;
+
+	while (harruma)
+	{
+		printf("%d\n", harruma->n);
+		harruma = harruma->next;
