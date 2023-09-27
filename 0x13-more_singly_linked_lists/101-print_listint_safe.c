@@ -23,3 +23,8 @@ size_t looped_listint_len(const listint_t *head)
 
 	while (achux)
 	{
+		if (harruma == achux)
+		{
+			harruma = head;
+			while (harruma != achux)
+			{
