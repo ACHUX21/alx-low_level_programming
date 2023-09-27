@@ -23,3 +23,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 
 	while (i != index)
+	{
+		if (!harruma)
+		{
+			return (-1);
+		}
