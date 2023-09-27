@@ -8,3 +8,8 @@ size_t free_listint_safe(listint_t **h)
 {
 	size_t l = 0;
 	int difference;
+	listint_t *temp;
+
+	if (!h || !*h)
+		return (0);
+
