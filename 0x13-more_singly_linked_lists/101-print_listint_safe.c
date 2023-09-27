@@ -33,3 +33,8 @@ size_t looped_listint_len(const listint_t *head)
 				achux = achux->next;
 			}
 
+			harruma = harruma->next;
+			while (harruma != achux)
+			{
+				n++;
+				harruma = harruma->next;
