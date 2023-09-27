@@ -18,3 +18,8 @@ listint_t *find_listint_loop(listint_t *head)
 		s = s->next;
 		if (f == s)
 		{
+			s = head;
+			while (s != f)
+			{
+				s = s->next;
+				f = f->next;
