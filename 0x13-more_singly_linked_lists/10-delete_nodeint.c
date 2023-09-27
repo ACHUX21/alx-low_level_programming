@@ -33,3 +33,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		harruma = harruma->next;
 	}
 
+	achux->next = harruma->next;
+	free(harruma);
+	return (1);
+}
