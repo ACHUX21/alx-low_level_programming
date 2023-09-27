@@ -23,3 +23,8 @@ size_t free_listint_safe(listint_t **h)
 			*h = temp;
 			l++;
 		}
+		else
+		{
+			free(*h);
+			*h = NULL;
+			l++;
