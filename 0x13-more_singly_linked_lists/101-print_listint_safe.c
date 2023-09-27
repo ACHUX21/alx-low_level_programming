@@ -43,3 +43,8 @@ size_t looped_listint_len(const listint_t *head)
 			return (n);
 		}
 
+		harruma = harruma->next;
+		achux = (achux->next)->next;
+	}
+
+	return (0);
