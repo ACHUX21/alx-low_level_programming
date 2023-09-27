@@ -18,3 +18,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (index == 0)
 	{
 		*head = harruma->next;
+		free(harruma);
+		return (1);
+	}
+
+	while (i != index)
