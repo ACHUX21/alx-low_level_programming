@@ -8,3 +8,8 @@ size_t print_listint_safe(const listint_t *head);
  * looped_listint_len - Counts
  * @head: A pointer
  * Return: If the list is not looped - 0.
+ * Otherwise -the list.
+ */
+size_t looped_listint_len(const listint_t *head)
+{
+	const listint_t *harruma, *achux;
