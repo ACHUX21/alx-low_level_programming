@@ -49,3 +49,36 @@ size_t looped_listint_len(const listint_t *head)
 
 	return (0);
 }
+/**
+ * print_listint_safe - Prints
+ * @head: A pointer
+ * Return: The number
+ */
+size_t print_listint_safe(const listint_t *head)
+{
+	size_t n, index = 0;
+
+	n = looped_listint_len(head);
+
+	if (n == 0)
+	{
+		for (; head != NULL; n++)
+		{
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
+		}
+	}
+
+	else
+	{
+		for (index = 0; index < n; index++)
+		{
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
+		}
+
+		printf("-> [%p] %d\n", (void *)head, head->n);
+	}
+
+	return (n);
+}
