@@ -8,3 +8,8 @@
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *harruma = malloc(sizeof(listint_t));
+
+	if (!harruma)
+		return (NULL);
+
+	harruma->n = n,	harruma->next = *head, *head = harruma;
