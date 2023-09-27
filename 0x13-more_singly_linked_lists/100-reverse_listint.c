@@ -8,3 +8,8 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *harr = NULL;
 	listint_t *uma = NULL;
+
+	while (*head)
+	{
+		uma = (*head)->next;
+		(*head)->next = harr;
