@@ -28,3 +28,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 		while (achux->next)
 		{
+			achux = achux->next;
+		}
+
+		achux->next = harrumma;
+	}
