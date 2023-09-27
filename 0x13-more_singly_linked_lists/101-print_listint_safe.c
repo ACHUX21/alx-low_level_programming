@@ -38,3 +38,8 @@ size_t looped_listint_len(const listint_t *head)
 			{
 				n++;
 				harruma = harruma->next;
+			}
+
+			return (n);
+		}
+
