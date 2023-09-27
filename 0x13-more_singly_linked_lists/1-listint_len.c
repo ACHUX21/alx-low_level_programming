@@ -13,3 +13,8 @@ size_t listint_len(const listint_t *h)
 	while (haruma)
 	{
 		haruma = haruma->next;
+		count++;
+	}
+
+	return (count);
+}
