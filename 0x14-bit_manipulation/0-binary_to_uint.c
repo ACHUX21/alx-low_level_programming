@@ -10,11 +10,15 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
+
 	while (*b)
 	{
 		if (*b != 48 && *b != 49)
 			return (0);
-		num <<= 1, num |= (*b - 48), b++;
+
+		num = num << 1;
+		num = num | (*b - 48);
+		b++;
 	}
 	return (num);
 }
