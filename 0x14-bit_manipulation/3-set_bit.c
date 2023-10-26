@@ -15,3 +15,4 @@ int set_bit(unsigned long int *n, unsigned int index)
 	switcher = 1 << index, *n |= switcher;
 	return (1);
 }
+
