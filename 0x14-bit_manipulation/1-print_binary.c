@@ -5,7 +5,10 @@
 */
 void print_binary(unsigned long int n)
 {
-	(n == 0) ? _putchar('0') : recursiveb(n);
+	if (n == 0)
+		_putchar('0');
+	else
+		recursiveb(n);
 }
 /**
 * recursiveb - recursively print binary
@@ -13,5 +16,7 @@ void print_binary(unsigned long int n)
 */
 void recursiveb(unsigned long int n)
 {
-	(n > 1) ? recursiveb(n >> 1) : 0, putchar((n & 1) + '0');
+	if (n > 1)
+		recursiveb(n >> 1);
+	putchar((n & 1) + '0');
 }
