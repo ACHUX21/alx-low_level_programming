@@ -22,7 +22,7 @@ int main(int ac, char **av)
 	file_from = open(av[1], O_RDONLY);
 	if (file_from == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(av[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
