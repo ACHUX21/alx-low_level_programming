@@ -60,7 +60,7 @@ int main(int argc, char **argv)
 	if (file_to == -1)
 		error99(argv[2]);
 
-	while (read_from == -1)
+	while (read_from > 0)
 	{
 		read_from = read(file_from, buffer, 1024);
 		if (read_from == -1)
