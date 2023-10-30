@@ -1,38 +1,40 @@
 #include "main.h"
+#include <unistd.h>
+#include <fcntl.h>
 /**
-* create_file - create a file
-* @filename: the name of the file
-* @text_content: the content of the file
-* Return: status code
-*/
+ * create_file - create a file
+ *
+ * @filename: The name that the new created file will had
+ * @text_content: String the will be written to @filename file
+ * Return: 1 on success, -1 on failure
+ */
 int create_file(const char *filename, char *text_content)
 {
-	int file;
-	ssize_t size;
-	int len = 0;
+	int fd;
+	int i = 0;
+	int size;
 
-	while (text_content[len] != '\0')
-		len++;
+	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600);
 
-	file = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	if (fd == -1 || filename == NULL)
+	{
+		return (-1);
+	}
 
 	if (text_content == NULL)
 	{
 		return (1);
 	}
 
-	if (file == -1)
-		return (-1);
+	while (*(text_content + i))
+		i++;
 
-	size = write(file, text_content, len);
+	size = write(fd, text_content, i);
 
 	if (size == -1)
 	{
-		close(file);
 		return (-1);
 	}
-
-	close(file);
-
+	close(fd);
 	return (1);
 }
