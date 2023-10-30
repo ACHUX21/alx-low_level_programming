@@ -44,7 +44,6 @@ void close_err(int file_from, int file_to)
 int main(int argc, char **argv)
 {
 	ssize_t file_to, file_from;
-	ssize_t read_from, write_from;
 	int cto, cfrom;
 
 	char buffer[1024];
