@@ -64,8 +64,11 @@ int main(int argc, char **argv)
 		error99(argv[2]);
 
 	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
+	{
 		write(file_to, buffer, bytes_read);
-
+		if (file_from != file_to)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	}
 	cfrom = close(file_from), cto = close(file_to);
 	if (cto == -1)
 	{
