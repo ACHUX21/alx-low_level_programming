@@ -45,9 +45,11 @@ int main(int argc, char **argv)
 {
 	ssize_t file_to, file_from;
 	ssize_t read_from, write_from;
-    int cto, cfrom;
+	int cto, cfrom;
+
 	char buffer[1024];
-    size_t bytes_read;
+
+	size_t bytes_read;
 
 	if (argc != 3)
 	{
