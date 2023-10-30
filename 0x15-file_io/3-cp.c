@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* cp - Copy the file contents to the file
+* main - Copy the file contents to the file
 * @argc: number of arguments
 * @argv: array of arguments
 * Return: 0
