@@ -45,7 +45,9 @@ int main(int argc, char **argv)
 {
 	ssize_t file_to, file_from;
 	ssize_t read_from, write_from;
+    int cto, cfrom;
 	char buffer[1024];
+    size_t bytes_read;
 
 	if (argc != 3)
 	{
@@ -60,23 +62,19 @@ int main(int argc, char **argv)
 	if (file_to == -1)
 		error99(argv[2]);
 
-	while (read_from > 0)
+	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
+		write(file_to, buffer, bytes_read);
+
+	cfrom = close(file_from), cto = close(file_to);
+	if (cto == -1)
 	{
-		read_from = read(file_from, buffer, 1024);
-		if (read_from == -1)
-		{
-			close(file_from);
-			close(file_to);
-			error98(argv[1]);
-		}
-		write_from = write(file_to, buffer, read_from);
-		if (write_from != -1)
-		{
-			close(file_from);
-			close(file_to);
-			error99(argv[2]);
-		}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cto);
+		exit(100);
 	}
-	close_err(file_from, file_to);
+	if (cfrom == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cfrom);
+		exit(100);
+	}
 	return (0);
 }
