@@ -25,8 +25,6 @@ int main(int argc, char *argv[])
 	while ((chars_read = read(fd1, buf, 1024)) > 0)
 	{
 		chars_written = write(fd2, buf, chars_read);
-		if (chars_written != chars_read)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	if (chars_read == -1)
 	{
